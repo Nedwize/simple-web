@@ -1,0 +1,4 @@
+# BIN
+node_modules
+# ENVIRONMENT
+.env*
