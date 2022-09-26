@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const PORT = process.env.PORT || 3030
 const MONGO_URI =
-  process.env.MONGO_DB_URI || 'mongodb://localhost:27017/simple-web-books'
+  process.env.MONGO_DB_URI || 'mongodb://mongodb:27017/simple-web-books'
 
 const NODE_ENV = process.env.NODE_ENV || 'staging'
 
