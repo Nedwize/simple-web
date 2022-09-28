@@ -1,8 +1,13 @@
 version: '3'
 services:
   mongodb:
-    image: mongo
+    image: mongo:4.2.2-bionic
+    container_name: mongodb
+    restart: unless-stopped
+    volumes:
+      - ./data:/data/dbo
   simple-web:
-    build: .
+    image: nedwize/simple-web
     ports:
       - '80:3030'
+      - '443:3030'
