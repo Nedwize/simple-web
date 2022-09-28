@@ -2,12 +2,15 @@ version: '3'
 services:
   mongodb:
     image: mongo:4.2.2-bionic
-    container_name: mongodb
-    restart: unless-stopped
+    restart: always
     volumes:
-      - ./data:/data/dbo
+      - mongodata:/data/db
+    ports:
+      - 27017:27017
   simple-web:
     image: nedwize/simple-web
     ports:
       - '80:3030'
       - '443:3030'
+volumes:
+  mongodata:
